@@ -249,9 +249,66 @@ img {
     background-color: #F4F4FD;
 }
 
-.features-icon {
 
+
+.astronaut {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+
+.astronaut:is(:hover, :focus,) {
+    animation-play-state: paused;
+}
+
+.clock:is(:hover, :focus,) {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.antenna:is(:hover, :focus,) {
+    animation: rotateY 3000ms infinite alternate backwards ease-in-out;
+}
+
+.diagram:is(:hover, :focus,) {
+    animation: rotateX 1500ms infinite alternate ease-in-out;
+}
+
+
+@keyframes spin {
+    0% {
+    transform: rotate(0deg);
+    }
+
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateY {
+    0% {
+    transform: perspective(400px) rotateY(30deg);
+    }
+
+    100% {
+    transform: perspective(400px) rotateY(-30deg);
+    }
+}
+
+@keyframes rotateX {
+    0% {
+        transform: perspective(400px) rotateX(0deg);
+    }
+    
+    100% {
+        transform: perspective(400px) rotateX(45deg);
+    }
+}
+
 
 /*------------------ SECTION 2 -------------------*/
 
