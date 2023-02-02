@@ -608,6 +608,10 @@ img {
                 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.product-item:hover .product-top-text {
+    transform: translateY(0%);
+}
+
 .product-content {
     padding: 32px 16px;
 }
@@ -625,5 +629,27 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text-color);
+}
+
+.product-top-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-top-text {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    background-color: #4D5AE5;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
 }
 
